@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Estruturado -->
+    <meta name="description" content="Portfólio de Luis Alberto de Oliveira. Product Owner & Scrum Master. Transformando desafios complexos em produtos digitais de alto impacto em Salvador, BA.">
+    <meta name="keywords" content="Product Owner, Scrum Master, Agile Master, Gestão de Produtos, Liderança Ágil, Luis Alberto de Oliveira, Salvador, Tecnologia, Unijorge">
+    <meta name="author" content="Luis Alberto de Oliveira">
+    <title>Luis Alberto de Oliveira | Product Owner & Scrum Master</title>
+
+    <link rel="icon" type="image/png" href="./assets/nova_logo_luia.png">
+
+    <!-- Fontes Customizadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração do Tailwind (Tema Claro) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#2563EB',
+                            light: '#3B82F6',
+                            dark: '#1E3A8A'
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(37, 99, 235, 0.2)',
+                        'neon-hover': '0 0 30px rgba(37, 99, 235, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body bg-grid">
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <header class="fixed w-full top-0 z-50 glass-light transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- LOGO DO PROFESSOR (Otimizada) -->
+            <a href="#inicio" class="flex items-center">
+                <img src="./assets/nova_logo_luia.png" alt="Logo Luis Alberto" class="logo-hq h-12 md:h-16 w-auto drop-shadow-sm">
+            </a>
+            
+            <!-- Menu Desktop -->
+            <ul class="hidden lg:flex space-x-6 font-heading text-xs lg:text-sm uppercase tracking-widest text-slate-700">
+                <li><a href="#inicio" class="hover:text-brand-blue transition-colors font-bold">Início</a></li>
+                <li><a href="#sobre" class="hover:text-brand-blue transition-colors font-bold">Sobre Mim</a></li>
+                <li><a href="#habilidades" class="hover:text-brand-blue transition-colors font-bold">Habilidades</a></li>
+                <li><a href="#projetos" class="hover:text-brand-blue transition-colors font-bold">Projetos</a></li>
+                <li><a href="#trajetoria" class="hover:text-brand-blue transition-colors font-bold">Trajetória</a></li>
+                <li><a href="#contato" class="hover:text-brand-blue transition-colors font-bold">Contato</a></li>
+            </ul>
+            
+            <!-- Menu Mobile Toggle -->
+            <button id="menu-btn" class="lg:hidden text-slate-900 hover:text-brand-blue transition">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 font-heading">
+            <ul class="flex flex-col text-center space-y-4 py-6 uppercase tracking-widest text-sm text-slate-900 font-bold">
+                <li><a href="#inicio" class="block hover:text-brand-blue">Início</a></li>
+                <li><a href="#sobre" class="block hover:text-brand-blue">Sobre Mim</a></li>
+                <li><a href="#habilidades" class="block hover:text-brand-blue">Habilidades</a></li>
+                <li><a href="#projetos" class="block hover:text-brand-blue">Projetos</a></li>
+                <li><a href="#trajetoria" class="block hover:text-brand-blue">Trajetória</a></li>
+                <li><a href="#contato" class="block hover:text-brand-blue">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO: INÍCIO (HERO) -->
+        <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+            <!-- Glow azul no fundo (suavizado para tema claro) -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/10 rounded-full blur-[100px] pointer-events-none"></div>
+            
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10 reveal">
+                <!-- Textos -->
+                <div>
+                    <p class="font-heading text-brand-blue font-bold tracking-[0.2em] mb-4 uppercase text-sm">Olá, sou Luis Alberto</p>
+                    <h1 class="text-5xl md:text-7xl font-heading font-black mb-6 leading-tight uppercase text-slate-900">
+                        Product Owner <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-400">& Scrum Master</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-slate-600 mb-8 font-light leading-relaxed">
+                        Transformo desafios complexos em produtos digitais de alto impacto.
+                    </p>
+                    <div class="flex flex-wrap gap-4 font-heading">
+                        <a href="#projetos" class="bg-slate-900 text-white hover:bg-brand-blue px-8 py-3 font-bold transition-all duration-300 rounded-sm">
+                            EXPLORE MEUS PROJETOS
+                        </a>
+                        <a href="#sobre" class="border border-slate-900 text-slate-900 hover:border-brand-blue hover:text-brand-blue px-8 py-3 font-bold transition-all duration-300 rounded-sm">
+                            SOBRE MIM
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ÚNICO ESPAÇO PARA FOTO -->
+                <div class="relative w-full h-[500px] md:h-[600px] border-2 border-dashed border-slate-400 bg-white/70 flex items-center justify-center group hover:border-brand-blue transition-colors duration-500 rounded-xl">
+                    <div class="relative w-full h-[500px] md:h-[600px] rounded-xl shadow-xl">
+                        <img src="C:\Users\jovemti\projetos\assets\foto-professor.jpeg" alt="Foto de Luis Alberto" class="object-cover w-full h-full rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: SOBRE MIM E RESULTADOS -->
+        <section id="sobre" class="py-24 border-t border-slate-200 bg-slate-50 relative">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-heading font-black mb-8 uppercase text-slate-900">Sobre Mim</h2>
+                        <div class="space-y-6 text-slate-600 font-light text-lg leading-relaxed">
+                            <p>
+                                Tenho mais de <strong class="text-slate-900 font-bold">18 anos de experiência</strong> em tecnologia e produtos digitais, transitando entre engenharia, gestão e liderança de times ágeis.
+                            </p>
+                            <p>
+                                Minha missão é construir soluções que <strong class="text-brand-blue font-bold">conectem pessoas, negócios e tecnologia</strong>, sempre com foco em impacto real.
+                            </p>
+                            <p>
+                                Ao longo da carreira, conquistei resultados como o aumento de 260% na vazão de equipes, redução de 75% em bugs e lançamentos de produtos complexos em tempo recorde. Gosto de transformar desafios em oportunidades de crescimento para empresas e times.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-heading font-bold uppercase text-slate-400 mb-8 tracking-widest">Principais Resultados</h3>
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            
+                            <div class="bg-white p-6 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all duration-300 rounded-xl shadow-sm">
+                                <span class="block text-5xl font-heading font-black text-brand-blue mb-2">260%</span>
+                                <span class="text-slate-600 font-bold text-sm uppercase tracking-wider">Aumento na vazão de equipes</span>
+                            </div>
+                            
+                            <div class="bg-white p-6 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all duration-300 rounded-xl shadow-sm">
+                                <span class="block text-5xl font-heading font-black text-brand-blue mb-2">75%</span>
+                                <span class="text-slate-600 font-bold text-sm uppercase tracking-wider">Redução em bugs</span>
+                            </div>
+
+                            <div class="bg-white p-6 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all duration-300 rounded-xl sm:col-span-2 text-center shadow-sm">
+                                <span class="block text-4xl font-heading font-black text-brand-blue mb-2">Tempo Recorde</span>
+                                <span class="text-slate-600 font-bold text-sm uppercase tracking-wider">Lançamentos de produtos complexos</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: HABILIDADES -->
+        <section id="habilidades" class="py-24 border-t border-slate-200 relative overflow-hidden bg-white/90">
+            <div class="container mx-auto px-6 reveal">
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-16 text-center uppercase text-slate-900">Minhas Habilidades</h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all rounded-2xl group">
+                        <div class="text-3xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">🎯</div>
+                        <h3 class="text-xl font-bold font-heading text-slate-900 mb-2 uppercase">Gestão de Produto</h3>
+                        <p class="text-slate-600 font-light text-sm">Do discovery ao delivery com foco em entrega contínua de valor.</p>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-8 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all rounded-2xl group">
+                        <div class="text-3xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">💬</div>
+                        <h3 class="text-xl font-bold font-heading text-slate-900 mb-2 uppercase">Comunicação & Estratégia</h3>
+                        <p class="text-slate-600 font-light text-sm">Alinhamento preciso entre stakeholders e times multidisciplinares.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all rounded-2xl group">
+                        <div class="text-3xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">📊</div>
+                        <h3 class="text-xl font-bold font-heading text-slate-900 mb-2 uppercase">Análise & Descoberta</h3>
+                        <p class="text-slate-600 font-light text-sm">Pesquisa, validação de hipóteses e acompanhamento de métricas de produto.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all rounded-2xl group">
+                        <div class="text-3xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">⚡</div>
+                        <h3 class="text-xl font-bold font-heading text-slate-900 mb-2 uppercase">Liderança Ágil</h3>
+                        <p class="text-slate-600 font-light text-sm">Scrum Master e facilitador para a construção de times de alta performance.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all rounded-2xl group md:col-span-2 lg:col-span-1">
+                        <div class="text-3xl mb-4 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">🚀</div>
+                        <h3 class="text-xl font-bold font-heading text-slate-900 mb-2 uppercase">Inovação & Tecnologia</h3>
+                        <p class="text-slate-600 font-light text-sm">Aplicação de Inteligência Artificial e tecnologias emergentes em produtos digitais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: PROJETOS DE DESTAQUE -->
+        <section id="projetos" class="py-24 border-t border-slate-200 bg-slate-50 relative">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-16 text-center uppercase text-slate-900 reveal">Meus Projetos</h2>
+                
+                <div class="space-y-12">
+                    <!-- Projeto 1: V8 TECH -->
+                    <article class="bg-white p-8 md:p-12 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all duration-500 rounded-3xl reveal shadow-sm">
+                        <div class="flex flex-wrap gap-2 mb-6 font-heading text-xs tracking-widest uppercase">
+                            <span class="bg-brand-blue/10 text-brand-blue font-bold px-3 py-1 rounded-full border border-brand-blue/20">Product Owner</span>
+                            <span class="bg-slate-100 text-slate-800 font-bold px-3 py-1 rounded-full border border-slate-200">Scrum Master</span>
+                            <span class="bg-slate-100 text-slate-800 font-bold px-3 py-1 rounded-full border border-slate-200">Delivery Manager</span>
+                        </div>
+                        <h3 class="text-3xl font-heading font-black text-slate-900 mb-8 uppercase">V8.TECH - Accelerate Platform</h3>
+                        
+                        <div class="grid md:grid-cols-3 gap-8 text-sm text-slate-600 font-light">
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Desafio</h4>
+                                <p>Acelerar o ciclo de desenvolvimento de software com uso de IA, reduzindo tempo de entrega e aumentando a eficiência das equipes de desenvolvimento.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Solução</h4>
+                                <p>Liderei o desenvolvimento da plataforma Accelerate, estruturando discovery, roadmap e backlog com foco em valor e experiência do usuário.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Resultado</h4>
+                                <p class="text-slate-900 font-bold">Aumento de 250% nas funcionalidades e lançamento produtivo em apenas 3 meses.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2: CWI/CREDZ -->
+                    <article class="bg-white p-8 md:p-12 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all duration-500 rounded-3xl reveal shadow-sm">
+                        <div class="flex flex-wrap gap-2 mb-6 font-heading text-xs tracking-widest uppercase">
+                            <span class="bg-brand-blue/10 text-brand-blue font-bold px-3 py-1 rounded-full border border-brand-blue/20">Product Owner</span>
+                            <span class="bg-slate-100 text-slate-800 font-bold px-3 py-1 rounded-full border border-slate-200">Scrum Master</span>
+                        </div>
+                        <h3 class="text-3xl font-heading font-black text-slate-900 mb-8 uppercase">CWI Software / CREDZ</h3>
+                        
+                        <div class="grid md:grid-cols-3 gap-8 text-sm text-slate-600 font-light">
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Desafio</h4>
+                                <p>Melhorar processos de Engenharia Evolutiva e Segurança da Informação, reduzindo bugs e aumentando a eficiência das entregas.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Solução</h4>
+                                <p>Implementei OKRs, cerimônias de refinamento e práticas ágeis para elevar a performance das equipes de Engenharia Evolutiva e Segurança.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Resultado</h4>
+                                <p class="text-slate-900 font-bold">Aumento de 260% na vazão de entregas, redução de 75% em bugs e melhoria de 100% na saúde do backlog.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3: VIVO -->
+                    <article class="bg-white p-8 md:p-12 border border-slate-200 hover:border-brand-blue hover:shadow-neon transition-all duration-500 rounded-3xl reveal shadow-sm">
+                        <div class="flex flex-wrap gap-2 mb-6 font-heading text-xs tracking-widest uppercase">
+                            <span class="bg-brand-blue/10 text-brand-blue font-bold px-3 py-1 rounded-full border border-brand-blue/20">Coordenador de TI</span>
+                            <span class="bg-slate-100 text-slate-800 font-bold px-3 py-1 rounded-full border border-slate-200">Agile Master</span>
+                            <span class="bg-slate-100 text-slate-800 font-bold px-3 py-1 rounded-full border border-slate-200">ITIL & PMBOK</span>
+                        </div>
+                        <h3 class="text-3xl font-heading font-black text-slate-900 mb-8 uppercase">Vivo (Telefônica Brasil)</h3>
+                        
+                        <div class="grid md:grid-cols-3 gap-8 text-sm text-slate-600 font-light">
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Desafio</h4>
+                                <p>Gerenciar equipes remotas de suporte nacional e infraestrutura de datacenter, introduzindo práticas ágeis em ambiente de alta complexidade.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Solução</h4>
+                                <p>Introduzi OKRs, KPIs e práticas ágeis, aplicando frameworks como ITIL e PMBOK para elevar a eficiência operacional.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-blue font-heading uppercase font-bold mb-3 tracking-widest">Resultado</h4>
+                                <p class="text-slate-900 font-bold">Elevação significativa da eficiência operacional com gestão de contratos e liderança técnica de alto nível.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: TRAJETÓRIA (CRONOLOGIA) -->
+        <section id="trajetoria" class="py-24 border-t border-slate-200 relative bg-white/90">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-heading font-black mb-16 text-center uppercase text-slate-900 reveal">Linha do Tempo</h2>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="reveal">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-12 h-12 bg-slate-900 text-white flex items-center justify-center font-bold text-xl rounded-lg shadow-md">🏢</div>
+                            <h3 class="text-2xl font-heading font-bold text-slate-900 uppercase">Mercado & Indústria</h3>
+                        </div>
+                        <div class="space-y-6 border-l-2 border-slate-200 pl-6 ml-6">
+                            
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-brand-blue group-hover:bg-slate-900 transition-colors shadow-sm border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Mar 2026 - Presente]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Agile Master | Analista de Agilidade</h4>
+                                <p class="text-slate-600 font-medium mb-2">HST Card Technology</p>
+                            </div>
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-blue transition-colors border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Abr 2025 - Mai 2026]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Scrum Master | PO</h4>
+                                <p class="text-slate-600 font-medium mb-2">V8 Tech</p>
+                            </div>
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-blue transition-colors border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Fev 2024 - Mar 2025]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Agile Master</h4>
+                                <p class="text-slate-600 font-medium mb-2">Belasoft</p>
+                            </div>
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-blue transition-colors border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Ago 2021 - Fev 2024]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Scrum Master</h4>
+                                <p class="text-slate-600 font-medium mb-2">CWI Software</p>
+                            </div>
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-blue transition-colors border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Abr 2017 - Ago 2021]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Agile Master</h4>
+                                <p class="text-slate-600 font-medium mb-2">Biolab Sanus Farmacêutica</p>
+                            </div>
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-slate-300 group-hover:bg-brand-blue transition-colors border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Out 2008 - Mar 2014]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Coordenador de TI | Agile Master</h4>
+                                <p class="text-slate-600 font-medium mb-2">Vivo</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="reveal">
+                        <!-- Academia -->
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="w-12 h-12 bg-slate-100 border border-slate-300 text-slate-900 flex items-center justify-center font-bold text-xl rounded-lg">🎓</div>
+                            <h3 class="text-2xl font-heading font-bold text-slate-900 uppercase">Educação</h3>
+                        </div>
+                        <div class="space-y-6 border-l-2 border-slate-200 pl-6 ml-6 mb-12">
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-brand-blue group-hover:bg-slate-900 transition-colors shadow-sm border-2 border-white"></span>
+                                <p class="text-brand-blue font-heading font-bold text-sm tracking-wider">[Fev 2024 - Presente]</p>
+                                <h4 class="text-xl font-black text-slate-900 mt-1">Professor Universitário</h4>
+                                <p class="text-slate-600 font-medium mb-2">Unijorge</p>
+                                <p class="text-slate-600 font-light text-sm">Disciplina: Metodologias Ágeis e Criativas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Prêmios -->
+                        <div class="flex items-center gap-4 mb-8 mt-12">
+                            <div class="w-12 h-12 bg-brand-blue/10 border border-brand-blue/30 text-brand-blue flex items-center justify-center font-bold text-xl rounded-lg">🏆</div>
+                            <h3 class="text-2xl font-heading font-bold text-slate-900 uppercase">Reconhecimentos</h3>
+                        </div>
+                        <div class="space-y-6 border-l-2 border-slate-200 pl-6 ml-6">
+                            <div class="relative group">
+                                <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-brand-blue shadow-sm border-2 border-white"></span>
+                                <h4 class="text-lg font-black text-slate-900 mt-1 uppercase">Prêmio VM TOP CLUBE</h4>
+                                <p class="text-slate-500 font-heading text-sm tracking-wider font-bold">Agosto de 2015 & Março de 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CONTATO E FORMULÁRIO -->
+        <section id="contato" class="py-24 border-t border-slate-200 bg-slate-50 relative overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brand-blue/5 blur-[150px] pointer-events-none"></div>
+            
+            <div class="container mx-auto px-6 reveal relative z-10">
+                <div class="max-w-5xl mx-auto bg-white p-8 md:p-16 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50">
+                    
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <!-- Lado Esquerdo: Textos e Informações -->
+                        <div>
+                            <h2 class="text-4xl font-heading font-black mb-6 uppercase text-slate-900">Vamos Conversar?</h2>
+                            <p class="text-slate-600 font-light text-lg mb-12">
+                                Quer conversar sobre como posso ajudar seu produto a crescer? Entre em contato comigo e vamos marcar uma conversa.
+                            </p>
+                            
+                            <div class="space-y-6 font-heading tracking-widest text-sm uppercase font-bold">
+                                
+                                <a href="mailto:oliv.luis@gmail.com" class="flex items-center gap-4 text-slate-700 hover:text-brand-blue transition-colors group">
+                                    <span class="w-12 h-12 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center p-2.5 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">
+                                        <img src="./assets/logo-gmail.webp" alt="Gmail" class="w-full h-full object-contain">
+                                    </span>
+                                    oliv.luis@gmail.com
+                                </a>
+
+                                <a href="https://linkedin.com/in/luis-alberto-oliveira-product-owner" target="_blank" class="flex items-center gap-4 text-slate-700 hover:text-brand-blue transition-colors group">
+                                    <span class="w-12 h-12 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center p-2.5 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">
+                                        <img src="./assets/logo-linkedin.webp" alt="LinkedIn" class="w-full h-full object-contain">
+                                    </span>
+                                    LinkedIn
+                                </a>
+
+                                <a href="[https://github.com/luizalberto]" target="_blank" class="flex items-center gap-4 text-slate-700 hover:text-brand-blue transition-colors group">
+                                    <span class="w-12 h-12 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center p-2.5 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">
+                                        <img src="./assets/github.webp" alt="GitHub" class="w-full h-full object-contain">
+                                    </span>
+                                    GitHub
+                                </a>
+                                
+                                <a href="tel:+5571992253545" class="flex items-center gap-4 text-slate-700 hover:text-brand-blue transition-colors group">
+                                    <span class="w-12 h-12 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center text-lg group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">📱</span>
+                                    +55 71 9 9225-3545
+                                </a>
+                                
+                                <div class="flex items-center gap-4 text-slate-700 group">
+                                    <span class="w-12 h-12 bg-slate-100 border border-slate-200 rounded-full flex items-center justify-center text-lg">📍</span>
+                                    Salvador, BA
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lado Direito: Formulário -->
+                        <div>
+                            <form action="#" method="POST" class="space-y-6">
+                                <div>
+                                    <label class="block font-heading text-xs uppercase tracking-widest text-slate-500 mb-2 font-bold">Nome</label>
+                                    <input type="text" required class="form-input w-full px-4 py-3 rounded-lg font-light placeholder-slate-400" placeholder="Seu nome completo">
+                                </div>
+                                
+                                <div>
+                                    <label class="block font-heading text-xs uppercase tracking-widest text-slate-500 mb-2 font-bold">E-mail</label>
+                                    <input type="email" required class="form-input w-full px-4 py-3 rounded-lg font-light placeholder-slate-400" placeholder="seu.email@exemplo.com">
+                                </div>
+                                
+                                <div>
+                                    <label class="block font-heading text-xs uppercase tracking-widest text-slate-500 mb-2 font-bold">Mensagem</label>
+                                    <textarea required rows="4" class="form-input w-full px-4 py-3 rounded-lg font-light placeholder-slate-400 resize-none" placeholder="Como posso ajudar?"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-slate-900 hover:bg-brand-blue text-white font-heading font-bold uppercase tracking-widest py-4 rounded-lg transition-all shadow-md hover:shadow-neon">
+                                    Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ EXPANDIDO -->
+    <footer class="bg-slate-50 pt-16 pb-8 border-t border-slate-200 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                
+                <!-- Info da Marca -->
+                <div class="md:col-span-6">
+                    <a href="#inicio" class="mb-4 block">
+                        <img src="./assets/nova_logo_luia.png" alt="Logo Luis Alberto" class="logo-hq h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-slate-600 font-light text-sm leading-relaxed max-w-sm mt-4">
+                        Product Owner & Scrum Master.<br>Construindo soluções que conectam pessoas, negócios e tecnologia.
+                    </p>
+                </div>
+                
+                <!-- Links Rápidos -->
+                <div class="md:col-span-3">
+                    <h4 class="text-slate-900 font-heading font-black uppercase tracking-widest text-sm mb-6">Navegação</h4>
+                    <ul class="space-y-3 text-slate-600 font-medium text-sm">
+                        <li><a href="#sobre" class="hover:text-brand-blue transition-colors">Sobre Mim</a></li>
+                        <li><a href="#habilidades" class="hover:text-brand-blue transition-colors">Habilidades</a></li>
+                        <li><a href="#projetos" class="hover:text-brand-blue transition-colors">Projetos</a></li>
+                        <li><a href="#trajetoria" class="hover:text-brand-blue transition-colors">Trajetória</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociais e Contato -->
+                <div class="md:col-span-3">
+                    <h4 class="text-slate-900 font-heading font-black uppercase tracking-widest text-sm mb-6">Redes Sociais</h4>
+                    <ul class="space-y-3 text-slate-600 font-medium text-sm">
+                        <li>
+                            <a href="https://linkedin.com/in/luis-alberto-oliveira-product-owner" target="_blank" class="hover:text-brand-blue transition-colors flex items-center gap-2">
+                                <img src="./assets/logo-linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain"> LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="[LINK_DO_GITHUB_AQUI]" target="_blank" class="hover:text-brand-blue transition-colors flex items-center gap-2">
+                                <img src="./assets/github.webp" alt="GitHub" class="w-4 h-4 object-contain"> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:oliv.luis@gmail.com" class="hover:text-brand-blue transition-colors flex items-center gap-2">
+                                <img src="./assets/logo-gmail.webp" alt="Gmail" class="w-4 h-4 object-contain"> oliv.luis@gmail.com
+                            </a>
+                        </li>
+                        <li class="pt-2">
+                            <a href="#inicio" class="text-brand-blue hover:text-slate-900 transition-colors font-bold">↑ Voltar ao topo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 font-heading text-xs tracking-widest uppercase gap-4">
+                <p>&copy; 2026 Luis Alberto de Oliveira. Todos os direitos reservados.</p>
+                <p>
+                    Design & Code by <span class="text-brand-blue font-bold">Pedro Lucas</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
