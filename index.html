@@ -10,6 +10,9 @@
     <meta name="author" content="Luis Alberto de Oliveira">
     <title>Luis Alberto de Oliveira | Product Owner & Scrum Master</title>
 
+    <!-- Favicon (asset específico por modo) -->
+    <link rel="icon" type="image/png" id="favicon" href="./assets/light/logo.png">
+
     <!-- Fontes Customizadas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +20,13 @@
 
     <!-- Script de Inicialização Rápida de Tema (Evita piscar branco no recarregamento) -->
     <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        var isThemeDark = localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isThemeDark) {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
         }
+        document.getElementById('favicon').href = isThemeDark ? './assets/black/logo.png' : './assets/light/logo.png';
     </script>
 
     <!-- Tailwind CSS -->
@@ -132,9 +137,9 @@
             <!-- LOGO DO PROFESSOR -->
             <a href="#inicio" class="flex items-center">
                 <!-- Mostra apenas no modo CLARO -->
-                <img src="./assets/nova_logo_luis (1).png" alt="Logo Luis Alberto" class="logo-hq h-12 md:h-16 w-auto drop-shadow-sm block dark:hidden">
+                <img src="./assets/light/logo.png" alt="Logo Luis Alberto" class="logo-hq h-12 md:h-16 w-auto drop-shadow-sm block dark:hidden">
                 <!-- Mostra apenas no modo ESCURO -->
-                <img src="./assets/logo-professor-invertida (1).png" alt="Logo Luis Alberto Invertida" class="logo-hq h-12 md:h-16 w-auto drop-shadow-sm hidden dark:block">
+                <img src="./assets/black/logo.png" alt="Logo Luis Alberto" class="logo-hq h-12 md:h-16 w-auto drop-shadow-sm hidden dark:block">
             </a>
             
             <!-- Menu Desktop -->
@@ -484,21 +489,24 @@
                                 
                                 <a href="mailto:oliv.luis@gmail.com" class="flex items-center gap-4 text-slate-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-light transition-colors group">
                                     <span class="w-12 h-12 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full flex items-center justify-center p-2.5 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">
-                                        <img src="./assets/logo-gmail.webp" alt="Gmail" class="w-full h-full object-contain">
+                                        <img src="./assets/light/gmail.png" alt="Gmail" class="w-full h-full object-contain block dark:hidden">
+                                        <img src="./assets/black/gmail.png" alt="Gmail" class="w-full h-full object-contain hidden dark:block">
                                     </span>
                                     oliv.luis@gmail.com
                                 </a>
 
                                 <a href="https://linkedin.com/in/luis-alberto-oliveira-product-owner" target="_blank" class="flex items-center gap-4 text-slate-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-light transition-colors group">
                                     <span class="w-12 h-12 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full flex items-center justify-center p-2.5 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">
-                                        <img src="./assets/logo-linkedin.png" alt="LinkedIn" class="w-full h-full object-contain">
+                                        <img src="./assets/light/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain block dark:hidden">
+                                        <img src="./assets/black/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain hidden dark:block">
                                     </span>
                                     LinkedIn
                                 </a>
 
-                                <a href="[LINK_DO_GITHUB_AQUI]" target="_blank" class="flex items-center gap-4 text-slate-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-light transition-colors group">
+                                <a href="https://github.com/luizalberto" target="_blank" class="flex items-center gap-4 text-slate-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-brand-light transition-colors group">
                                     <span class="w-12 h-12 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-full flex items-center justify-center p-2.5 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all">
-                                        <img src="./assets/github.webp" alt="GitHub" class="w-full h-full object-contain">
+                                        <img src="./assets/light/github.png" alt="GitHub" class="w-full h-full object-contain block dark:hidden">
+                                        <img src="./assets/black/github.png" alt="GitHub" class="w-full h-full object-contain hidden dark:block">
                                     </span>
                                     GitHub
                                 </a>
@@ -554,9 +562,9 @@
                 <div class="md:col-span-6">
                     <a href="#inicio" class="mb-4 block">
                         <!-- Mostra apenas no modo CLARO -->
-                        <img src="./assets/logo_luis.png" alt="Logo Luis Alberto" class="logo-hq h-12 w-auto object-contain drop-shadow-sm block dark:hidden">
+                        <img src="./assets/light/logo.png" alt="Logo Luis Alberto" class="logo-hq h-12 w-auto object-contain drop-shadow-sm block dark:hidden">
                         <!-- Mostra apenas no modo ESCURO -->
-                        <img src="./assets/logo-professor-invertida (1).jpeg" alt="Logo Luis Alberto Invertida" class="logo-hq h-12 w-auto object-contain hidden dark:block">
+                        <img src="./assets/black/logo.png" alt="Logo Luis Alberto" class="logo-hq h-12 w-auto object-contain hidden dark:block">
                     </a>
                     <p class="text-slate-600 dark:text-gray-400 font-light text-sm leading-relaxed max-w-sm mt-4">
                         Product Owner & Scrum Master.<br>Construindo soluções que conectam pessoas, negócios e tecnologia.
@@ -580,17 +588,17 @@
                     <ul class="space-y-3 text-slate-600 dark:text-gray-400 font-medium text-sm">
                         <li>
                             <a href="https://linkedin.com/in/luis-alberto-oliveira-product-owner" target="_blank" class="hover:text-brand-blue dark:hover:text-brand-light transition-colors flex items-center gap-2">
-                                <img src="./assets/logo-linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain"> LinkedIn
+                                <img src="./assets/light/linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain block dark:hidden"><img src="./assets/black/linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain hidden dark:block"> LinkedIn
                             </a>
                         </li>
                         <li>
-                            <a href="[LINK_DO_GITHUB_AQUI]" target="_blank" class="hover:text-brand-blue dark:hover:text-brand-light transition-colors flex items-center gap-2">
-                                <img src="./assets/github.webp" alt="GitHub" class="w-4 h-4 object-contain"> GitHub
+                            <a href="https://github.com/luizalberto" target="_blank" class="hover:text-brand-blue dark:hover:text-brand-light transition-colors flex items-center gap-2">
+                                <img src="./assets/light/github.png" alt="GitHub" class="w-4 h-4 object-contain block dark:hidden"><img src="./assets/black/github.png" alt="GitHub" class="w-4 h-4 object-contain hidden dark:block"> GitHub
                             </a>
                         </li>
                         <li>
                             <a href="mailto:oliv.luis@gmail.com" class="hover:text-brand-blue dark:hover:text-brand-light transition-colors flex items-center gap-2">
-                                <img src="./assets/logo-gmail.webp" alt="Gmail" class="w-4 h-4 object-contain"> oliv.luis@gmail.com
+                                <img src="./assets/light/gmail.png" alt="Gmail" class="w-4 h-4 object-contain block dark:hidden"><img src="./assets/black/gmail.png" alt="Gmail" class="w-4 h-4 object-contain hidden dark:block"> oliv.luis@gmail.com
                             </a>
                         </li>
                         <li class="pt-2">
@@ -647,6 +655,11 @@
                     localStorage.setItem('color-theme', 'dark');
                 }
             }
+
+            // Troca o favicon pelo asset do modo ativo
+            document.getElementById('favicon').href = document.documentElement.classList.contains('dark')
+                ? './assets/black/logo.png'
+                : './assets/light/logo.png';
         });
 
         // Menu Mobile Toggle
